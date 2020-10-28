@@ -15,7 +15,7 @@ html{
 
 body{
     background-color: white;
-    max-width: 1024;
+    max-width: 1024px;
     margin: auto;
     box-shadow: var(--Shadow) 10px 10px 25px, var(--Shadow) -10px 10px 25px;
     
@@ -26,14 +26,14 @@ background-color: white;
 width: 100%;
 }
 
-img#logoimage {
+img#logoImage {
     display: block;
     width: 100%;
     max-width: 600px;
     margin: auto;
 }
 
-p{
+p {
 font-size: 1.2rem;
 line-height: 1.4rem;
 margin: 15px;
@@ -49,7 +49,7 @@ color: white;
 display: block;
 font-size: 1.2rem;
 text-align: center;
-padding: 5% 0;
+padding: 5% 0
 }
 
 nav.top ul li a:hover{
