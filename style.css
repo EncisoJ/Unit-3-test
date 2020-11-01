@@ -58,51 +58,51 @@ Base styles used by All Screens DO NOT EDIT ABOVE
 
 
 html{
-    background-color: var(--Html-background);
+    background: var(--Html-background);
     font-family: Verdana, Geneva, sans-serif;
     font-size: 12px;
 }
 
 body{
-    background-color: white;
+    background: white;
     max-width: 1024px;
     margin: auto;
     box-shadow: var(--Shadow) 10px 10px 25px, var(--Shadow) -10px 10px 25px;
     
 }
 
-body>header {
-background-color: white;
+body header {
+background: white;
 width: 100%;
 }
 
-img#logoImage {
+img#logoImage{
     display: block;
     width: 100%;
     max-width: 600px;
     margin: auto;
 }
 
-p {
+p{
 font-size: 1.2rem;
 line-height: 1.4rem;
 margin: 15px;
 }
 
-nav.top ul li{
-    margin:10px;
+nav.top ul{
+    margin: 10px;
 
 }
 
-nav.top ul li a {
+nav.top ul a{
 color: white;
 display: block;
 font-size: 1.2rem;
 text-align: center;
-padding: 5% 0
+padding: 5% 0% 5% 0%;
 }
 
-nav.top ul li a:hover{
+nav.top ul a:hover{
     color: var(--Nav-active);
     text-shadow: 0px 0px 2px black, 0px 0px 15px white;
 }
@@ -110,12 +110,16 @@ nav.top ul li a:hover{
 article p:nth-child(2) img {
     float: right;
     width: 45%;
-    margin: 0px, 0px, 120px, 50px;
-    transform: translate(0, 60px) rotate(30deg);
+    margin: 0px 0px 120px 50px;
+    transform: translateY(60px) rotate(30deg);
     box-shadow: var(--Shadow) 10px -10px 30px;
 }
-
-section.spotlight h1{
+section.spotlight{
+    background: var(--spotlight);
+    padding-bottom: 15px;
+    overflow: auto;
+}
+section.spotlight h1 {
     font-size: 2.5rem;
     color: var(--Text-color);
     text-shadow: white -2px 0px 1px, white -5px 0px 30px;
@@ -125,21 +129,21 @@ section.spotlight h1{
 
 section.spotlight img {
     width: 35%;
-    float:left;
+    float: left;
     display: block;
     margin: 20px 20px 10px 15px;
 }
 
-section.spotlight p{
-    margin-bottom: 0;
+section.spotlight p {
+    margin-bottom: 0px;
 }
 
-aside {
-background-color: var(--Text-background);
+aside{
+    background: var(--Text-background);
 }
 
-aside a {
-    color: var(--Nav-active)
+aside a{
+    color: var(--Nav-active);
 }
 
 aside h1{
@@ -153,10 +157,14 @@ aside h1{
 aside img {
     display: block;
     width: 30%;
-    margin: 5px auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
 }
 
-dl {
+dl{
     text-align: center;
 }
 
@@ -164,7 +172,7 @@ footer{
     width: 100%;
 }
 
-dl dd {
+dl dt {
     margin-bottom: 20px;
 }
 
@@ -174,7 +182,7 @@ nav#bottom {
     padding: 15px;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: none;
     justify-content: center;
 }
 
@@ -187,22 +195,24 @@ nav#bottom ul li a{
     color: white;
 }
 
-footer p {
+footer p{
     color: var(--Text-color);
     font-size: 0.9rem;
     text-align: center;
-    background-color: black;
-    margin: 0;
+    background: black;
+    margin: 0px;
     padding: 10px 0px 10px 10px;
 }
 
 nav#bottom ul {
-flex: 0 1 150px;
+    flex-shrink: 1;
+    flex-grow: 0;
+    max-width: 150px;
 }
 
-@media(max-width: 480px) {
-    body {
-        background-color: var(--Shadow);
+@media (max-width: 480px){
+    body{
+        background: var(--Shadow);
         color: var(--Text-background);
     }
 
@@ -226,71 +236,73 @@ flex: 0 1 150px;
 
     nav.top ul li {
         font-size: 2.2rem;
-        flex: 1 1 130px;
+        flex-basis: 130px;
+        flex-shrink: 1;
+        flex-grow: 1;
     }
 
-    nav.top ul li a {
-        padding: 50% 0;
+    nav.top ul li a{
+            padding: 50% 0% 50% 0%;
     }
 
-    nav.top ul li:nth-of-type(1) {
-        background-image: url(images/cw_image01.png);
+    nav.top ul li:nth-of-type(1){
+        background: url(images/cw_image01.png);
         background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        background-repeat: none;
+        background-size: auto;
     }
 
-    nav.top ul li:nth-of-type(2) {
-background-image: url(images/cw_image02.png);
+    nav.top ul li:nth-of-type(2){
+background: url(images/cw_image02.png);
 background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
+background-repeat: none;
+background-size: auto;
     }
 
-    nav.top ul li:nth-of-type(3) {
-        background-image: url(images/cw_image03.png);
+    nav.top ul li:nth-of-type(3){
+        background: url(images/cw_image03.png);
         background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-
-    }nav.top ul li:nth-of-type(4) {
-        background-image: url(images/cw_image04.png);
+        background-repeat: none;
+        background-size: auto;
+    }
+    nav.top ul li:nth-of-type(4){
+        background: url(images/cw_image04.png);
         background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        background-repeat: none;
+        background-size: auto;
     }
 
-    nav.top ul li:nth-of-type(5) {
-        background-image: url(images/cw_image05.png);
+    nav.top ul li:nth-of-type(5){
+        background: url(images/cw_image05.png);
         background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        background-repeat: none;
+        background-size: auto;
     }
 
-    nav.top ul li:nth-of-type(6) {
-        background-image: url(images/cw_image06.png);
+    nav.top ul li:nth-of-type(6){
+        background: url(images/cw_image06.png);
         background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        background-repeat: none;
+        background-size: auto;
     }
 
-    p#links {
+    p#links{
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: none;
         flex-direction: row;
         justify-content: space-around;
 
     }
 
-    p#links a {
-        background-color: var(--Nav-active);
+    p#links a{
+        background: var(--Nav-active);
         color: white;
         text-decoration: none;
         padding: 10px;
         border-radius: 20px;
     }
 
-    @media(min-width:481px) {
+    @media(min-width: 481px) {
         body {
             display: flex;
             flex-wrap: wrap;
@@ -298,28 +310,35 @@ background-size: cover;
         }
     
         article {
-            flex: 2 1 400px;
+            flex-basis: 400px;
+            flex-grow: 2;
+            flex-shrink: 1;
+
         }
     
         aside {
-            flex: 1 2 200px;
+            flex-basis: 200px;
+            flex-grow: 1;
+            flex-shrink: 2;
         }
     
-        nav.top ul {
+        nav.top ul{
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
             background-color: var(--Shadow);
             height: 50px;
             align-items: center;
-            justify-content: center;
+            justify-items: center;
         }
     
-        nav.top ul li {
-            flex: 0 1 80px;
+        nav.top ul li{
+        flex-basis: 80px;
+        flex-grow: 0;
+        flex-shrink: 1;
         }
     
-        p#links {
+        p#links{
             display: none;
         }
     }
